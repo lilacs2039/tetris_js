@@ -20,10 +20,29 @@
   <body
     class="bg-gray-900 text-white flex items-center justify-center h-screen"
   >
-    <div id="game" class="bg-gray-800 p-4 rounded-lg shadow-lg">
-      <canvas id="tetris" class="block mx-auto"></canvas>
-      <div id="score" class="text-center mt-4">スコア: 0</div>
+    <div id="game" class="bg-gray-800 p-4 rounded-lg shadow-lg flex">
+      <div>
+        <canvas id="tetris" class="block mx-auto"></canvas>
+        <div id="score" class="text-center mt-4">スコア: 0</div>
+      </div>
+      <div class="ml-4">
+        <h2 class="text-lg font-bold">操作説明</h2>
+        <ul class="list-disc list-inside">
+          <li>左矢印キー: 左に移動</li>
+          <li>右矢印キー: 右に移動</li>
+          <li>下矢印キー: 下に移動</li>
+          <li>上矢印キー: 一瞬で一番下まで移動</li>
+          <li>Qキー: 左に回転</li>
+          <li>Wキー: 右に回転</li>
+        </ul>
+      </div>
+    </div>
+    <div id="game-over" class="hidden flex-col items-center justify-center">
+      <h1 class="text-2xl font-bold">ゲームオーバー</h1>
+      <div id="final-score" class="mt-4">最終スコア: 0</div>
+      <button id="restart" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">リスタート</button>
     </div>
     <script src="tetris.js"></script>
+    <script src="game_over.js"></script>
   </body>
 </html>
