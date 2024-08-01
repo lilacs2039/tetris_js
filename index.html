@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シンプルテトリス</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+      }
+      canvas {
+        border: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-900 text-white flex items-center justify-center h-screen"
+  >
+    <div id="game" class="bg-gray-800 p-4 rounded-lg shadow-lg">
+      <canvas id="tetris" class="block mx-auto"></canvas>
+      <div id="score" class="text-center mt-4">スコア: 0</div>
+    </div>
+    <script src="tetris.js"></script>
+  </body>
+</html>
