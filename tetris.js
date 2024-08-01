@@ -207,6 +207,17 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.addEventListener("keydown", (event) => {
+    if (event.key === 'ArrowUp') {
+      // ブロックを一瞬で一番下まで移動
+      while (!collide(grid, player)) {
+        player.pos.y++;
+      }
+      player.pos.y--;
+      merge(grid, player);
+      playerReset();
+      gridSweep();
+      updateScore();
+    }
     event.keyCode === 37
       ? playerMove(-1)
       : event.keyCode === 39
