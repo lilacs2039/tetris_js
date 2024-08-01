@@ -14,6 +14,5 @@ index.htmlをブラウザで開く
 
 ## システム構成
 - index.html: ゲームのHTML構成を定義
-- styles.css: ゲームのスタイルを定義
 - tetris.js: ゲームのロジックを実装
 
